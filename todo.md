@@ -23,3 +23,7 @@
 - [ ] Add the actual Android public RevenueCat SDK key through secure project settings when available
 - [ ] Validate the configured RevenueCat Android key and Android app readiness without exposing credentials
 - [x] Add an official step-by-step Google Play service account credentials guide for RevenueCat
+- [x] Build a free flexible weekly plan with three to five swappable meal ideas
+- [x] Build an adaptive shopping list from saved and weekly meal ideas with equivalent substitutions
+- [x] Extend food preferences with allergens, disliked ingredients, and budget-aware recommendations
+- [x] Add configurable gentle local reminders using non-judgmental wording

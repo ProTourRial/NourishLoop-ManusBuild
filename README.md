@@ -9,8 +9,9 @@
 | Mobile application | Expo Router, React Native, TypeScript, and a portrait-first Android experience |
 | Recommendation API | Public, typed tRPC endpoint with deterministic scoring and Zod validation |
 | Original dataset | Eight hand-authored, flexible meal and snack templates with substitutions |
-| Core experience | Today, Quick Check-in, Recommendation, Saved Ideas, Profile, and Plus paywall |
-| Local persistence | Saved ideas and user preferences stored with AsyncStorage |
+| Core experience | Today, Quick Check-in, Recommendation, Saved Ideas, free Flexible Week, adaptive Shopping List, Profile, and Plus paywall |
+| Local persistence | Saved ideas, expanded food preferences, flexible weekly plan, shopping checks, and reminder settings stored with AsyncStorage |
+| Gentle reminders | Optional daily local Android reminders with consent-based notification permission and non-judgmental wording |
 | Monetization | Official `react-native-purchases` and `react-native-purchases-ui` packages installed, with purchase and restore flows prepared |
 | Quality | Vitest tests for the recommendation service and TypeScript type checking |
 

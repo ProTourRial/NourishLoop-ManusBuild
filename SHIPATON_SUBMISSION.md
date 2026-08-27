@@ -16,7 +16,11 @@ The app is designed for moments when deciding what to eat feels disproportionate
 | Explainable recommendation engine | A typed API ranks original meal templates using a deterministic fit score and returns the best idea, the reason it fits, and a supportive nudge. |
 | Flexible meal cards | Each result gives a simple balance of components, preparation steps, and substitutions instead of fixed rules. |
 | Saved calm corner | Helpful ideas can be saved locally and revisited later. |
-| NourishLoop Plus | The subscription experience is designed to unlock unlimited ideas, expanded substitutions, and gentle weekly collections through RevenueCat. |
+| Flexible week | A free 3–5 idea plan that can be refreshed or swapped whenever a day changes. |
+| Adaptive shopping list | Combines components from the weekly plan and saved ideas, then offers equivalent ingredient alternatives. |
+| Personal boundaries | Dietary preferences, ingredient considerations, personal avoid lists, and budget-aware ranking make suggestions more relevant without medical claims. |
+| Gentle reminders | Optional daily local reminders use permission-based, non-judgmental wording. |
+| NourishLoop Plus | The subscription experience is positioned as optional support for future collections and tools through RevenueCat. |
 
 ## Nutrition & Healthy Eating Influencer Award description
 
@@ -36,7 +40,7 @@ NourishLoop aims to reduce the friction and shame that can make everyday eating 
 
 ## HAMM Award description
 
-The free experience proves value through a fast daily check-in and one useful meal idea. NourishLoop Plus monetizes depth rather than restriction: unlimited personalized ideas, expanded substitutions, and weekly collections that reduce planning fatigue. RevenueCat controls entitlements and current offerings, enabling product/pricing iteration without hardcoding price data in the mobile client.
+The free experience proves value through a fast daily check-in, a swappable weekly plan, an adaptive shopping list, and supportive reminders. NourishLoop Plus remains optional rather than restrictive: it is positioned to support new collections and future tools. RevenueCat controls entitlements and current offerings, enabling product/pricing iteration without hardcoding price data in the mobile client.
 
 ## Required submission assets
 
@@ -57,8 +61,8 @@ The free experience proves value through a fast daily check-in and one useful me
 | 0:00–0:12 | Today screen and the “Find my next meal” action | Introduce NourishLoop as flexible food support without counting. |
 | 0:12–0:37 | Complete Quick Check-in with realistic time, hunger, mood, and ingredients | Show how the app meets a user where they are. |
 | 0:37–1:12 | Reveal a recommendation and scroll components, steps, substitutions, and the fit reason | Explain that every option is practical and adaptable. |
-| 1:12–1:28 | Save an idea, open Saved Ideas, then re-open it | Show how useful choices stay accessible on later days. |
-| 1:28–1:50 | Visit Profile and the Plus paywall, then show an active test entitlement if configured | Explain premium support and RevenueCat-powered subscription access. |
+| 1:12–1:28 | Build a Flexible Week, swap one day, then open the adaptive Shopping List | Show that practical planning and substitutions are free. |
+| 1:28–1:50 | Visit Profile, add an ingredient to avoid, and configure a gentle reminder; then show the optional Plus paywall | Explain consent-based personalization and RevenueCat-powered optional support. |
 | 1:50–2:00 | Return to Today screen | Restate the project’s compassionate, non-restrictive mission. |
 
 ## Testing instructions for judges

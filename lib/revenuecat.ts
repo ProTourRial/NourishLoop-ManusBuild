@@ -1,8 +1,10 @@
 import { Platform } from "react-native";
 import Purchases from "react-native-purchases";
 import { REVENUECAT_ENTITLEMENT_ID } from "@/shared/monetization";
+import { isAndroidRevenueCatPublicKey } from "@/shared/revenuecat-key";
 
-const androidApiKey = process.env.EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY;
+const configuredKey = process.env.EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY;
+const androidApiKey = isAndroidRevenueCatPublicKey(configuredKey) ? configuredKey : undefined;
 let configured = false;
 
 export async function configureRevenueCat() {

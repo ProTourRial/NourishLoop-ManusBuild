@@ -41,6 +41,12 @@ export default function TodayScreen() {
           <Pressable onPress={() => router.push("/saved" as never)} style={({ pressed }) => [styles.textButton, pressed && styles.pressed]}><Text style={styles.textButtonText}>Open saved ideas</Text><MaterialCommunityIcons name="arrow-right" size={18} color="#1F5A4C" /></Pressable>
         </View>
 
+        <Pressable onPress={() => router.push("/weekly-plan" as never)} style={({ pressed }) => [styles.weekCard, pressed && styles.pressed]}>
+          <IconBadge icon="calendar-heart" color="#1F5A4C" background="#DCE9DF" />
+          <View style={styles.weekText}><Text style={styles.weekTitle}>Build a flexible week</Text><Text style={styles.weekCopy}>Choose 3–5 ideas, then swap anything that stops fitting.</Text></View>
+          <MaterialCommunityIcons name="arrow-right" size={20} color="#1F5A4C" />
+        </Pressable>
+
         <Pressable onPress={() => router.push("/premium" as never)} style={({ pressed }) => [styles.plusBanner, pressed && styles.pressed]}>
           <MaterialCommunityIcons name={hasPro ? "check-decagram" : "creation"} size={22} color="#F3B284" />
           <View style={styles.plusText}><Text style={styles.plusTitle}>{hasPro ? "NourishLoop Plus is active" : "Meet NourishLoop Plus"}</Text><Text style={styles.plusCopy}>{hasPro ? "Your expanded weekly support is ready." : "Unlock more ways to make eating feel easier."}</Text></View>
@@ -81,6 +87,10 @@ const styles = StyleSheet.create({
   savedCopy: { color: "#547066", fontSize: 14, lineHeight: 20 },
   textButton: { minHeight: 37, alignSelf: "flex-start", flexDirection: "row", gap: 6, alignItems: "center" },
   textButtonText: { color: "#1F5A4C", fontSize: 14, lineHeight: 19, fontWeight: "800" },
+  weekCard: { minHeight: 84, borderRadius: 21, backgroundColor: "#FFFFFF", padding: 15, borderWidth: 1, borderColor: "#ECEDE8", flexDirection: "row", alignItems: "center", gap: 11 },
+  weekText: { flex: 1, gap: 2 },
+  weekTitle: { color: "#21312B", fontSize: 15, lineHeight: 20, fontWeight: "800" },
+  weekCopy: { color: "#6F8176", fontSize: 12, lineHeight: 17 },
   plusBanner: { minHeight: 88, borderRadius: 20, backgroundColor: "#21312B", padding: 16, flexDirection: "row", alignItems: "center", gap: 12 },
   plusText: { flex: 1, gap: 2 },
   plusTitle: { color: "#FFFFFF", fontSize: 15, lineHeight: 20, fontWeight: "800" },

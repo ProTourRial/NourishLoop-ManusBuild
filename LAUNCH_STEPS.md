@@ -75,6 +75,9 @@ Konfigurasi rilis sudah disiapkan dalam `eas.json`. Profil `preview` menargetkan
 | Membeli paket tester | Entitlement `nourishloop_pro` aktif dan tampilan berubah menjadi Plus aktif |
 | Restore purchase | Akses Plus pulih untuk akun Google yang sama |
 | Membuka Saved | Ide yang disimpan tetap muncul setelah aplikasi ditutup dan dibuka lagi |
+| Rencana mingguan | Buat 3–5 ide, tukar satu ide, lalu pastikan perubahan tersimpan setelah aplikasi dibuka kembali |
+| Daftar belanja | Pastikan daftar menggabungkan ide mingguan dan tersimpan, lalu centang satu item dan periksa statusnya setelah aplikasi dibuka kembali |
+| Pengingat lembut | Pada perangkat Android fisik, aktifkan izin, jadwalkan satu pengingat, lalu cek notifikasi dengan pesan yang tidak menghakimi |
 
 ## Tahap 6 — Lengkapi Listing Google Play
 

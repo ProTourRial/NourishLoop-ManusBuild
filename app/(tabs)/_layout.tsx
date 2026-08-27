@@ -42,6 +42,8 @@ export default function TabLayout() {
       <Tabs.Screen name="check-in" options={{ href: null }} />
       <Tabs.Screen name="idea" options={{ href: null }} />
       <Tabs.Screen name="premium" options={{ href: null }} />
+      <Tabs.Screen name="weekly-plan" options={{ href: null }} />
+      <Tabs.Screen name="shopping-list" options={{ href: null }} />
     </Tabs>
     </NourishProvider>
   );

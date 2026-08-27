@@ -13,8 +13,10 @@ The core promise is: **"Feel better-fed, not more controlled."** Every recommend
 | Today | Greeting, daily intention, compact check-in, one featured meal idea, meal balance progress, and an upgrade entry point | Start a recommendation, view a suggestion, save an idea, and open the premium plan |
 | Check-in | Hunger, energy, available time, food mood, and ingredient selection presented as large choice chips | Create a personalized recommendation request through the API |
 | Recommendation | A generated food suggestion with practical components, gentle balance cues, substitutions, preparation steps, and a save action | Save the idea, request an alternative, or continue to the plan |
+| Flexible Week | Three to five meal cards with a day label, fast swap action, and shopping-list entry point | Refresh the week, swap any meal idea, and open the adaptive list |
+| Shopping List | Components grouped by category, individual check states, and equivalent alternatives | Check off items and adapt the list around familiar food or availability |
 | Saved | A searchable-feeling, calm collection of saved meal ideas organized by moment of day | Review and remove saved recommendations persisted locally |
-| Profile | Flexible eating preferences, dietary considerations, notification preference, and subscription status | Update preferences and access the premium paywall |
+| Profile | Dietary choices, ingredient considerations, personal avoid list, budget preference, reminder time, and subscription status | Update preferences, schedule/cancel a gentle local reminder, and access the premium paywall |
 | Premium paywall | Benefit-led comparison of Free and Plus, monthly/yearly options, restore purchase, and legal microcopy | Initiate RevenueCat purchase flow and restore entitlement |
 
 ## Primary User Flows
@@ -22,8 +24,10 @@ The core promise is: **"Feel better-fed, not more controlled."** Every recommend
 | Flow | Steps |
 |---|---|
 | Personalized meal support | Today → “Find my next meal” → Check-in selections → “Create my idea” → API returns recommendation → Save or try another suggestion |
+| Flexible planning | Today → “Build a flexible week” → Weekly Plan → Swap any meal that does not fit → Build Shopping List → Check off or substitute staples |
+| Gentle reminder | Profile → Enable reminder → Android permission prompt → Choose a time → Notification opens NourishLoop on the chosen daily schedule |
 | Fast fallback idea | Today → Tap featured idea → Recommendation → Use substitutions or save it |
-| Premium conversion | Any locked plan element → Premium paywall → Select plan → RevenueCat purchase → Success confirmation → Premium content unlocked |
+| Premium conversion | Optional support entry → Premium paywall → Select plan → RevenueCat purchase → Success confirmation → Premium status active |
 | Preference control | Profile → Toggle dietary consideration / update food preferences → Save locally → Future requests carry preferences to the API |
 
 ## Layout Principles

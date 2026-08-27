@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
+import { isAndroidRevenueCatPublicKey } from "../shared/revenuecat-key";
 
 const root = process.cwd();
 
@@ -12,9 +13,10 @@ describe("Android release configuration", () => {
     expect(config.build.production.android.buildType).toBe("app-bundle");
   });
 
-  it("accepts only an empty placeholder or an Android public SDK key", () => {
-    const configuredKey = process.env.EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY ?? "";
-    expect(configuredKey === "" || configuredKey.startsWith("goog_")).toBe(true);
+  it("safely ignores placeholder and Test Store keys while accepting Android public keys", () => {
+    expect(isAndroidRevenueCatPublicKey("placeholder")).toBe(false);
+    expect(isAndroidRevenueCatPublicKey("test_example")).toBe(false);
+    expect(isAndroidRevenueCatPublicKey("goog_example")).toBe(true);
 
     const configSource = readFileSync(resolve(root, "app.config.ts"), "utf8");
     expect(configSource).toContain("EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY");

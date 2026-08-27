@@ -16,7 +16,7 @@ NourishLoop contains the official RevenueCat React Native SDK integration. The r
 
 ## Safe SDK key handoff
 
-The project has an intentionally empty `EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY` value in its secure configuration. This is the expected placeholder: it reserves the exact variable name but does not place a fake key in the APK, source tree, or GitHub history. After the Android/Google Play application is added in RevenueCat, replace it with the real **Android public SDK key** through the project Secrets panel. The app reads that variable only in an Android build and keeps Plus inactive until a valid key and current offering are available.
+The project may retain an empty or text-only `EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY` placeholder in its secure configuration. The application now ignores any value that is not an Android public SDK key (expected to begin with `goog_`), so no fake/Test Store key can activate billing in a build. After the Android/Google Play application is added in RevenueCat, replace it with the real **Android public SDK key** through the project Secrets panel. The app keeps Plus inactive until a valid key and current offering are available.
 
 ## Application contract
 

@@ -11,12 +11,12 @@ import { trpc } from "@/lib/trpc";
 import type { EnergyLevel, FoodMood, HungerLevel, NourishCheckIn, TimeWindow } from "@/shared/nourish";
 
 const ingredientChoices = ["Eggs", "Bread", "Yogurt", "Rice", "Beans", "Greens", "Fruit", "Noodles"];
-const defaultCheckIn: NourishCheckIn = { hunger: "ready", energy: "steady", time: "fifteen", mood: "warm", ingredients: [], dietary: [] };
+const defaultCheckIn: NourishCheckIn = { hunger: "ready", energy: "steady", time: "fifteen", mood: "warm", ingredients: [], dietary: [], allergens: [], avoidIngredients: [], budget: "flexible" };
 
 export default function CheckInScreen() {
   const router = useRouter();
   const { preferences, setLatestRecommendation } = useNourish();
-  const [form, setForm] = useState<NourishCheckIn>({ ...defaultCheckIn, dietary: preferences.dietary });
+  const [form, setForm] = useState<NourishCheckIn>({ ...defaultCheckIn, dietary: preferences.dietary, allergens: preferences.allergens, avoidIngredients: preferences.avoidIngredients, budget: preferences.budget });
   const [submitted, setSubmitted] = useState<NourishCheckIn | null>(null);
   const recommendation = trpc.nourish.recommend.useQuery(submitted ?? defaultCheckIn, { enabled: Boolean(submitted), retry: 1 });
 
