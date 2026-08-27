@@ -25,6 +25,7 @@ const bundleId =
 // e.g., "space.manus.my.app.t20240115103045" -> "manus20240115103045"
 const timestamp = bundleId.split(".").pop()?.replace(/^t/, "") ?? "";
 const schemeFromBundleId = `manus${timestamp}`;
+const revenueCatAndroidKeyConfigured = Boolean(process.env.EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY);
 
 const env = {
   // App branding - update these values directly (do not use env vars)
@@ -47,6 +48,12 @@ const config: ExpoConfig = {
   scheme: env.scheme,
   userInterfaceStyle: "automatic",
   newArchEnabled: true,
+  extra: {
+    revenueCat: {
+      entitlementId: "nourishloop_pro",
+      androidKeyConfigured: revenueCatAndroidKeyConfigured,
+    },
+  },
   ios: {
     supportsTablet: true,
     bundleIdentifier: env.iosBundleId,

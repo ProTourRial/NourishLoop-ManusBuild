@@ -63,6 +63,8 @@ Tambahkan key dengan nama `EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY` melalui panel
 
 Setelah key RevenueCat dan produk Google Play siap, buka checkpoint terbaru dari panel proyek dan klik **Publish** untuk memulai build Android. Proses ini adalah cara yang disarankan untuk menghasilkan APK; jangan membuat APK secara manual di lingkungan kerja. Untuk uji awal, gunakan jalur **Internal testing** di Google Play sehingga Anda dan tester terdaftar dapat memasang build tanpa menunggu rilis publik.
 
+Konfigurasi rilis sudah disiapkan dalam `eas.json`. Profil `preview` menargetkan artefak APK untuk distribusi internal, sedangkan profil `production` menargetkan Android App Bundle untuk Google Play. Kedua profil tidak berisi SDK key. Variabel Android RevenueCat telah dibuat dalam konfigurasi rahasia proyek dengan nilai kosong; saat key Android tersedia, ganti nilainya melalui Secrets, buat checkpoint baru, lalu gunakan Publish untuk build yang sesuai.
+
 | Uji yang harus dilakukan | Hasil yang diharapkan |
 |---|---|
 | Membuka aplikasi | Today screen dan Check-in tampil tanpa crash |

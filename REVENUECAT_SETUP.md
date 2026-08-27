@@ -14,6 +14,10 @@ NourishLoop contains the official RevenueCat React Native SDK integration. The r
 | 6 | Add Android public SDK key as `EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY` through secure project settings | Enables `Purchases.configure` in Android builds |
 | 7 | Produce a development or internal Android build, then make a sandbox purchase | Validates purchase and restore end to end |
 
+## Safe SDK key handoff
+
+The project has an intentionally empty `EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY` value in its secure configuration. This is the expected placeholder: it reserves the exact variable name but does not place a fake key in the APK, source tree, or GitHub history. After the Android/Google Play application is added in RevenueCat, replace it with the real **Android public SDK key** through the project Secrets panel. The app reads that variable only in an Android build and keeps Plus inactive until a valid key and current offering are available.
+
 ## Application contract
 
 The code expects the verified entitlement identifier `nourishloop_pro`. `getPremiumStatus()` reads that entitlement from `CustomerInfo`. `getCurrentOffering()` reads the RevenueCat current offering. The purchase button purchases the first available package in the current offering, so the dashboard must have a valid current offering before the launch build.

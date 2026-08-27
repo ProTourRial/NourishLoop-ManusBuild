@@ -19,3 +19,5 @@
 - [x] Confirm the RevenueCat project, Android app, entitlement, and current offering status
 - [x] Align the NourishLoop app entitlement identifier with the verified RevenueCat entitlement `nourishloop_pro`
 - [x] Create a step-by-step RevenueCat, Google Play, APK, and Shipaton launch guide
+- [x] Prepare Android build configuration and safe RevenueCat SDK key handoff
+- [ ] Add the actual Android public RevenueCat SDK key through secure project settings when available
