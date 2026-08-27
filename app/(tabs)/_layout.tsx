@@ -2,9 +2,10 @@ import { Tabs } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { HapticTab } from "@/components/haptic-tab";
-import { IconSymbol } from "@/components/ui/icon-symbol";
+import { NourishProvider } from "@/lib/nourish-context";
 import { Platform } from "react-native";
 import { useColors } from "@/hooks/use-colors";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function TabLayout() {
   const colors = useColors();
@@ -13,6 +14,7 @@ export default function TabLayout() {
   const tabBarHeight = 56 + bottomPadding;
 
   return (
+    <NourishProvider>
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: colors.tint,
@@ -31,10 +33,16 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Home",
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: "Today",
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons size={25} name="home-variant-outline" color={color} />,
         }}
       />
+      <Tabs.Screen name="saved" options={{ title: "Saved", tabBarIcon: ({ color }) => <MaterialCommunityIcons size={24} name="bookmark-outline" color={color} /> }} />
+      <Tabs.Screen name="profile" options={{ title: "Profile", tabBarIcon: ({ color }) => <MaterialCommunityIcons size={24} name="account-circle-outline" color={color} /> }} />
+      <Tabs.Screen name="check-in" options={{ href: null }} />
+      <Tabs.Screen name="idea" options={{ href: null }} />
+      <Tabs.Screen name="premium" options={{ href: null }} />
     </Tabs>
+    </NourishProvider>
   );
 }
