@@ -18,3 +18,4 @@
 - [x] Verify and activate the RevenueCat connector for NourishLoop monetization setup
 - [x] Confirm the RevenueCat project, Android app, entitlement, and current offering status
 - [x] Align the NourishLoop app entitlement identifier with the verified RevenueCat entitlement `nourishloop_pro`
+- [x] Create a step-by-step RevenueCat, Google Play, APK, and Shipaton launch guide
