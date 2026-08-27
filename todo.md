@@ -15,3 +15,6 @@
 - [ ] Deliver APK, repository URL, and handover materials
 - [ ] Connect a RevenueCat project, Google Play products, and Android public SDK key for live billing
 - [ ] Publish the eligible first public Android version to Google Play during the submission period
+- [x] Verify and activate the RevenueCat connector for NourishLoop monetization setup
+- [x] Confirm the RevenueCat project, Android app, entitlement, and current offering status
+- [x] Align the NourishLoop app entitlement identifier with the verified RevenueCat entitlement `nourishloop_pro`

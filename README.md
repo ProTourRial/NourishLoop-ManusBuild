@@ -25,12 +25,12 @@ The app is intentionally safe before a RevenueCat key is configured: the Plus sc
 | RevenueCat / Google Play item | Required value |
 |---|---|
 | Android app | NourishLoop package name from `app.config.ts` |
-| Entitlement | `nourishloop_plus` |
+| Entitlement | `nourishloop_pro` |
 | Google Play subscription products | A monthly and annual NourishLoop Plus product |
 | RevenueCat offering | Set one offering as **current** and attach the products |
 | App runtime configuration | Add `EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY` as a secure project setting; never commit it |
 
-With a valid Android public SDK key, the application configures the official RevenueCat SDK, checks active `nourishloop_plus` entitlements, reads the current offering, starts purchase, and restores purchases. A development build or store build is required for real in-app purchases; preview environments do not complete native billing.
+With a valid Android public SDK key, the application configures the official RevenueCat SDK, checks active `nourishloop_pro` entitlements, reads the current offering, starts purchase, and restores purchases. A development build or store build is required for real in-app purchases; preview environments do not complete native billing.
 
 ## Android release
 

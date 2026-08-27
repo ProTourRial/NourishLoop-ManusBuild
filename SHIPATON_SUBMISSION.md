@@ -63,4 +63,4 @@ The free experience proves value through a fast daily check-in and one useful me
 
 ## Testing instructions for judges
 
-Open NourishLoop, choose **Find my next meal**, select the check-in options, and choose **Create my meal idea**. Review the returned meal, substitutions, and match explanation. Save it with the bookmark button and verify it appears in **Saved**. Open **Profile → Explore Plus** to inspect the monetization flow. After the live store configuration is complete, use the supplied trial or promo code to unlock Plus and verify the `nourishloop_plus` entitlement.
+Open NourishLoop, choose **Find my next meal**, select the check-in options, and choose **Create my meal idea**. Review the returned meal, substitutions, and match explanation. Save it with the bookmark button and verify it appears in **Saved**. Open **Profile → Explore Plus** to inspect the monetization flow. After the live store configuration is complete, use the supplied trial or promo code to unlock Plus and verify the `nourishloop_pro` entitlement.
