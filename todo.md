@@ -27,3 +27,4 @@
 - [x] Build an adaptive shopping list from saved and weekly meal ideas with equivalent substitutions
 - [x] Extend food preferences with allergens, disliked ingredients, and budget-aware recommendations
 - [x] Add configurable gentle local reminders using non-judgmental wording
+- [x] Verify allergy/food-avoidance preference propagation and adaptive shopping substitutions end to end

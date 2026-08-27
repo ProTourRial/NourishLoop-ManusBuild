@@ -21,6 +21,12 @@ export default function CheckInScreen() {
   const recommendation = trpc.nourish.recommend.useQuery(submitted ?? defaultCheckIn, { enabled: Boolean(submitted), retry: 1 });
 
   useEffect(() => {
+    if (!submitted) {
+      setForm((current) => ({ ...current, dietary: preferences.dietary, allergens: preferences.allergens, avoidIngredients: preferences.avoidIngredients, budget: preferences.budget }));
+    }
+  }, [preferences, submitted]);
+
+  useEffect(() => {
     if (recommendation.data) {
       setLatestRecommendation(recommendation.data);
       haptic.success();
