@@ -35,4 +35,10 @@ describe("NourishLoop planning services", () => {
     const recommendation = recommendIdea({ ...baseCheckIn, avoidIngredients: ["lentils"] });
     expect(recommendation.idea.id).not.toBe("golden-lentil-soup");
   });
+
+  it("returns a boundary-first fallback rather than a conflicting catalogue idea", () => {
+    const recommendation = recommendIdea({ ...baseCheckIn, allergens: ["nuts", "eggs", "dairy", "soy", "gluten", "sesame"] });
+    expect(recommendation.idea.id).toBe("constraint-first-flexible-plate");
+    expect(recommendation.idea.encouragement).toContain("boundaries matter");
+  });
 });

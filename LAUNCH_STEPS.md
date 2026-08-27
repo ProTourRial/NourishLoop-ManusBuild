@@ -78,6 +78,7 @@ Konfigurasi rilis sudah disiapkan dalam `eas.json`. Profil `preview` menargetkan
 | Rencana mingguan | Buat 3–5 ide, tukar satu ide, lalu pastikan perubahan tersimpan setelah aplikasi dibuka kembali |
 | Daftar belanja | Pastikan daftar menggabungkan ide mingguan dan tersimpan, lalu centang satu item dan periksa statusnya setelah aplikasi dibuka kembali |
 | Pengingat lembut | Pada perangkat Android fisik, aktifkan izin, jadwalkan satu pengingat, lalu cek notifikasi dengan pesan yang tidak menghakimi |
+| Berbagi daftar belanja | Buka daftar yang memiliki isi, tekan Share, pilih WhatsApp atau aplikasi Notes, lalu verifikasi judul, kategori, checkbox, dan substitusi bahan muncul pada draf |
 
 ## Tahap 6 — Lengkapi Listing Google Play
 

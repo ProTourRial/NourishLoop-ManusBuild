@@ -28,6 +28,29 @@ function matchesAvoidance(idea: NourishIdea, checkIn: NourishCheckIn): boolean {
   return allergenMatch || avoidedIngredientMatch;
 }
 
+function createConstraintFirstFallback(checkIn: NourishCheckIn): NourishIdea {
+  return {
+    id: "constraint-first-flexible-plate",
+    title: "A familiar flexible plate",
+    subtitle: "A build-your-own idea for when the catalogue needs to make more room for your boundaries.",
+    timeMinutes: timeBudget[checkIn.time],
+    moods: [checkIn.mood],
+    energyFit: [checkIn.energy],
+    hungerFit: [checkIn.hunger],
+    dietary: checkIn.dietary,
+    tags: ["Flexible", "Check labels", "Use what works"],
+    components: [
+      { role: "Base", item: "A familiar base that works for you" },
+      { role: "Protein", item: "A familiar protein that works for you" },
+      { role: "Produce", item: "Any fruit or vegetable you feel good about" },
+      { role: "Flavor", item: "A label-checked sauce, seasoning, or topping" },
+    ],
+    steps: ["Choose a base and protein you know feel workable.", "Add a fruit or vegetable if it is available and appealing.", "Check labels and preparation surfaces before adding any flavour or topping."],
+    substitutions: ["Use a familiar pantry or freezer alternative.", "Keep the components separate if that makes the choice simpler today."],
+    encouragement: "Your boundaries matter. A familiar choice can be the most supportive place to start.",
+  };
+}
+
 function scoreIdea(idea: NourishIdea, checkIn: NourishCheckIn): number {
   const timeScore = idea.timeMinutes <= timeBudget[checkIn.time] ? 5 : Math.max(0, 3 - Math.ceil((idea.timeMinutes - timeBudget[checkIn.time]) / 10));
   const moodScore = overlapScore(idea.moods, [checkIn.mood]) * 4;
@@ -43,7 +66,7 @@ function scoreIdea(idea: NourishIdea, checkIn: NourishCheckIn): number {
 function rankedIdeas(checkIn: NourishCheckIn): NourishIdea[] {
   const dietaryCandidates = nourishIdeas.filter((idea) => checkIn.dietary.length === 0 || checkIn.dietary.every((preference) => idea.dietary.includes(preference)));
   const compatibleCandidates = dietaryCandidates.filter((idea) => !matchesAvoidance(idea, checkIn));
-  const candidates = compatibleCandidates.length > 0 ? compatibleCandidates : dietaryCandidates;
+  const candidates = compatibleCandidates.length > 0 ? compatibleCandidates : [createConstraintFirstFallback(checkIn)];
   return candidates
     .map((idea) => ({ idea, score: scoreIdea(idea, checkIn) }))
     .sort((left, right) => right.score - left.score || left.idea.title.localeCompare(right.idea.title))

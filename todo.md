@@ -28,3 +28,6 @@
 - [x] Extend food preferences with allergens, disliked ingredients, and budget-aware recommendations
 - [x] Add configurable gentle local reminders using non-judgmental wording
 - [x] Verify allergy/food-avoidance preference propagation and adaptive shopping substitutions end to end
+- [x] Add adaptive shopping-list export through the Android system share sheet for WhatsApp, Notes, and other apps
+- [x] Add deterministic tests for exported shopping text and allergy-aware planning behavior
+- [x] Validate Android build readiness for sharing and document device/emulator test steps

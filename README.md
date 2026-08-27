@@ -12,6 +12,7 @@
 | Core experience | Today, Quick Check-in, Recommendation, Saved Ideas, free Flexible Week, adaptive Shopping List, Profile, and Plus paywall |
 | Local persistence | Saved ideas, expanded food preferences, flexible weekly plan, shopping checks, and reminder settings stored with AsyncStorage |
 | Gentle reminders | Optional daily local Android reminders with consent-based notification permission and non-judgmental wording |
+| Shopping-list export | Creates a text file and opens the Android system share sheet for WhatsApp, Notes, email, or other compatible installed apps |
 | Monetization | Official `react-native-purchases` and `react-native-purchases-ui` packages installed, with purchase and restore flows prepared |
 | Quality | Vitest tests for the recommendation service and TypeScript type checking |
 
