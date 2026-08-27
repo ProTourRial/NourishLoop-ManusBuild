@@ -21,3 +21,5 @@
 - [x] Create a step-by-step RevenueCat, Google Play, APK, and Shipaton launch guide
 - [x] Prepare Android build configuration and safe RevenueCat SDK key handoff
 - [ ] Add the actual Android public RevenueCat SDK key through secure project settings when available
+- [ ] Validate the configured RevenueCat Android key and Android app readiness without exposing credentials
+- [x] Add an official step-by-step Google Play service account credentials guide for RevenueCat

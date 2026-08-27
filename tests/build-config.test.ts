@@ -12,9 +12,9 @@ describe("Android release configuration", () => {
     expect(config.build.production.android.buildType).toBe("app-bundle");
   });
 
-  it("does not accept the RevenueCat Test Store key as an Android production key", () => {
+  it("accepts only an empty placeholder or an Android public SDK key", () => {
     const configuredKey = process.env.EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY ?? "";
-    expect(configuredKey.startsWith("test_")).toBe(false);
+    expect(configuredKey === "" || configuredKey.startsWith("goog_")).toBe(true);
 
     const configSource = readFileSync(resolve(root, "app.config.ts"), "utf8");
     expect(configSource).toContain("EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY");

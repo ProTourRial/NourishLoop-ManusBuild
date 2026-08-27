@@ -53,6 +53,8 @@ Di dashboard RevenueCat, tambahkan aplikasi Android dalam proyek **NourishLoop**
 
 Kaitkan kedua produk premium ke entitlement `nourishloop_pro`, lalu tambahkan produk itu ke offering current. Langkah ini memastikan pembelian yang berhasil akan memberi entitlement yang dibaca langsung oleh kode aplikasi.
 
+Untuk panduan pembuatan, izin, dan pengunggahan file Service Account Credentials JSON secara aman, lihat [`GOOGLE_PLAY_CREDENTIALS.md`](./GOOGLE_PLAY_CREDENTIALS.md).
+
 ## Tahap 4 — Tambahkan Android Public SDK Key ke Aplikasi
 
 Setelah aplikasi Android dibuat di RevenueCat, ambil **Android public SDK key** untuk aplikasi itu. Public SDK key berbeda dari secret API key dan memang digunakan di aplikasi client. Jangan menaruh key tersebut ke GitHub atau file source yang dikomit.
